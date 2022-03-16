@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=
+  "https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <title>Vite App</title>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Let's Calculate!</h1>
+    <form>
+      <input onfocus="this.select()" type="number" id="num1" name=
+      "num1" value="0"> <select id="operand" name="operand">
+        <option value="+">
+          +
+        </option>
+        <option value="-">
+          -
+        </option>
+        <option value="*">
+          *
+        </option>
+        <option value="/">
+          /
+        </option>
+      </select> <input type="number" id="num2" name="num2" value=
+      "0" onfocus="this.select()"> <button>=</button> <input type=
+      "number" id="result" name="result" value="0" disabled>
+    </form>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
 </html>
