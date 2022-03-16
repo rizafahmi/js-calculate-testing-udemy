@@ -21,6 +21,8 @@ test('"1" + "1" = 2', function() {
 test('"1" + 1 = 2', function() {
   expect(add("1", 1)).toBe(2);
 });
-test.todo('"something" + 5 = Error');
+test('"something" + 5 = Calculation Error', function () {
+  expect(add("something", 5)).toEqual('Calculation Error')
+});
 test.todo('true + 10 = Error');
 test.todo('3.14 + 10 = 13.14');
