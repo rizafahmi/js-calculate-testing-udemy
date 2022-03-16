@@ -11,6 +11,8 @@ function calculate(num1, operand, num2) {
 export function add(num1, num2) {
   if (isNaN(num1) || isNaN(num2)) {
     return 'Calculation Error';
+  } else if(Number.isInteger(num1) !== true || Number.isInteger(num2)) {
+    return parseFloat(num1) + parseFloat(num2);
   } else {
     return parseInt(num1) + parseInt(num2);
   }
