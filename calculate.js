@@ -9,7 +9,11 @@ function calculate(num1, operand, num2) {
 }
 
 export function add(num1, num2) {
-  return parseInt(num1) + parseInt(num2);
+  if (isNaN(num1) || isNaN(num2)) {
+    return 'Calculation Error';
+  } else {
+    return parseInt(num1) + parseInt(num2);
+  }
 }
 
 export function sub(num1, num2) {
